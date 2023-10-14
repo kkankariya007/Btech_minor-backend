@@ -37,9 +37,9 @@ async def receiveFile(file: bytes = File(...)):
         PIL.Image.Resampling = PIL.Image
     np.set_printoptions(suppress=True)
 
-    model = load_model('converted_keras\keras_model.h5', compile=False)
+    model = load_model('keras_model.h5', compile=False)
 
-    class_names = open('converted_keras\labels.txt', 'r').readlines()
+    class_names = open('labels.txt', 'r').readlines()
 
     data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
